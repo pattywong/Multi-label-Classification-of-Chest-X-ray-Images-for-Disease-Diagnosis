@@ -16,10 +16,10 @@ Experiments of multi-label learning methods:
 0. N binary classifiers - Benchmark 
 1. [Label Powerset (LP)](https://www.researchgate.net/publication/263813673_A_Review_On_Multi-Label_Learning_Algorithms) - Problem transformation method : multi-class classification
 2. [Classifier Chains (CC)](https://www.researchgate.net/publication/263813673_A_Review_On_Multi-Label_Learning_Algorithms) - Problem transformation method that considers label correlations
-3. [Custom loss](https://link.springer.com/article/10.1007%2Fs11042-019-08260-2) - A pair of novel loss functions to consider the label relationship between present and absent classes
+3. [Custom loss](https://link.springer.com/article/10.1007%2Fs11042-019-08260-2) - A pair of novel loss functions considering the label relationship between present and absent classes
 4. [Hierarchical training method](https://arxiv.org/abs/1911.06475) - Training procedure to exploit label dependencies
 
-# Getting Started
+# Getting started
 ## Requirement
 - Python 
 - OpenCV 
