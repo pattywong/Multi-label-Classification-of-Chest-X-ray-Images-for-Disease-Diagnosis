@@ -22,10 +22,15 @@ Experiments of multi-label learning methods:
 ## Dataset
 [CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/) is a large dataset of chest X-rays and competition contains 224,316 chest radiographs of 65,240 patients, containing both frontal and lateral views, labelled for 14 common CXR observations where each observation are either 0 (negative), 1 (positive), or u (uncertain), available for automated chest x-ray interpretation, featuring uncertainty labels and radiologist-labeled reference standard evaluation sets.
 
+![dataset_ex](/assets/frontal_and_lateral_cxr.png)
+
 The experiments of methods are conducted on 102,942 chest radiograph images with frontal views from CheXpert focusing on 5 common pathologies, namely Cardiomegaly, Lung Opacity, Edema, Atelectasis, and Pleural Effusion, where samples with uncertainty labels are ignored.
 
 ## Model Architecure
 [DenseNet121](https://arxiv.org/abs/1608.06993v5) is one of the new discoveries in convolutional neural networks that utilises dense connections between layers, through Dense Blocks, where we connect all layers (with matching feature-map sizes) directly with each other. To preserve the feed-forward nature, each layer obtains additional inputs from all preceding layers and passes on its own feature-maps to all subsequent layers. On four highly competitive object recognition benchmark tasks (CIFAR-10, CIFAR-100, SVHN, and ImageNet), DenseNets obtain significant improvements over the state-of-the-art on most of them, whilst requiring less computation to achieve high performance.
+
+![model](/assets/densenet_ex.png)
+
 
 ## Requirements
 - Python 
