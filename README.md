@@ -31,12 +31,32 @@ The experiments of methods are conducted on 102,942 chest radiograph images with
 
 ![model](/assets/densenet_ex.png)
 
-
 ## Requirements
-- Python 
-- OpenCV 
-- Tensorflow 
-- Keras 
+- Python 3.6.5
+- Tensorflow 1.13.1
+- Keras 2.2.4
+- Other packages in `requirements.txt`
+
+## Installation
+
+### Installing all packages using pip
+
+Without using Anaconda, you will have to download and install respective versions of cudatoolkit and cudnn manually. Then, you have to set path variables for your systems.
+
+```
+pip install -r requirements.txt
+```
+
+### Installing TensorFlow using conda
+
+The advantage of using Anaconda to install is you can download tensorflow-gpu with respective versions of dependent packages all at once. You will not have to install cudatoolkit and cudnn manually from Nvidia because the packages are included in tensorflow-gpu, then install others packages using pip to complete.
+
+```
+conda install tensorflow-gpu
+```
+
+### Installing Microsoft Visual Studio
+Cuda libraries will be compiled using MSVS as a compiler. It is necessary to select the correct version of MSVS depending on the version of the Cuda toolkit you are selecting. You can download the Community Version of Microsoft Visual Studio [here](https://visualstudio.microsoft.com/downloads/).
 
 ## Training model
 
