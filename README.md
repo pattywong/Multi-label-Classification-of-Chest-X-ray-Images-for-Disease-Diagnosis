@@ -13,7 +13,7 @@ Diagnosis in chest radiography is considered to be a multi-label and fine-graine
 
 Experiments of multi-label learning methods:
 
-0. N binary classifiers - Benchmark 
+0. [Binary Relevance (BR)](https://arxiv.org/abs/1502.05988) - Benchmark 
 1. [Label Powerset (LP)](https://www.researchgate.net/publication/263813673_A_Review_On_Multi-Label_Learning_Algorithms) - Problem transformation method : multi-class classification
 2. [Classifier Chains (CC)](https://www.researchgate.net/publication/263813673_A_Review_On_Multi-Label_Learning_Algorithms) - Problem transformation method that considers label correlations
 3. [Custom loss](https://link.springer.com/article/10.1007%2Fs11042-019-08260-2) - A pair of novel loss functions considering the label relationship between present and absent classes
@@ -24,6 +24,8 @@ Experiments of multi-label learning methods:
 
 ![dataset_ex](/assets/frontal_and_lateral_cxr.png)
 
+Please note that you need to subscribe to CheXpert website to download the dataset: https://stanfordmlgroup.github.io/competitions/chexpert/
+
 The experiments of methods are conducted on 102,942 chest radiograph images with frontal views from CheXpert focusing on 5 common pathologies, namely Cardiomegaly, Lung Opacity, Edema, Atelectasis, and Pleural Effusion, where samples with uncertainty labels are ignored.
 
 ## Model Architecure
@@ -33,7 +35,7 @@ The experiments of methods are conducted on 102,942 chest radiograph images with
 
 ## Requirements
 - Python 3.6.5
-- Tensorflow 1.13.1
+- TensorFlow 1.13.1
 - Keras 2.2.4
 - Other packages in `requirements.txt`
 
