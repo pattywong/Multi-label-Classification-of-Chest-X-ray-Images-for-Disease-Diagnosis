@@ -62,24 +62,18 @@ Cuda libraries will be compiled using MSVS as a compiler. It is necessary to sel
 
 ## Training model
 
+```
+python main.py train --method=<method>
+```
+
 ## Inference
+```
+python main.py test --method=<method> --weights=</path/to/weights> 
+```
 
 ## Results and Analysis
 
 ## Conclusion
 
 ## Citations
-
-
-
-
-
-
-
-
-
-
-
-
-
 
