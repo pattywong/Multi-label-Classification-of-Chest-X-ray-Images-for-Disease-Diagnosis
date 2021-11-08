@@ -7,11 +7,8 @@ Diagnosis in chest radiography is considered to be a multi-label and fine-graine
 Experiments of multi-label learning methods:
 
 1. [Binary Relevance (BR)](https://arxiv.org/abs/1502.05988) - Benchmark 
-
 2. [Label Powerset (LP)](https://www.researchgate.net/publication/263813673_A_Review_On_Multi-Label_Learning_Algorithms) - Problem transformation method : multi-class classification
-
 3. [Custom loss](https://link.springer.com/article/10.1007%2Fs11042-019-08260-2) - A pair of novel loss functions considering the label relationship between present and absent classes
-
 4. [Hierarchical training method](https://arxiv.org/abs/1911.06475) - Training procedure to exploit label dependencies
 
 ## Dataset
@@ -77,5 +74,5 @@ python main.py test --method=<method> --weights=<weights_filename>
 | P(Act-A,Pred-A) | 0.5255     | 0.5896          |    0.5549    |       0.5240   |
 
 ## Conclusion
-Top two methods that can achieve significant overall performance improvements over Baseline method are Labelpowerset and Custom loss methods with 0.8909 and 0.8714 5-label AUC respectively on our test set.
+Top two methods that can achieve significant overall performance improvements over Baseline method are Labelpowerset and Custom loss methods with 0.8909 and 0.8714 of 5-label AUC respectively on our test set.
 
