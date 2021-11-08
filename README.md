@@ -8,20 +8,16 @@ Experiments of multi-label learning methods:
 
 1. [Binary Relevance (BR)](https://arxiv.org/abs/1502.05988) - Benchmark 
 
-![baseline](/assets/baseline-model-schema.png)
 
 
 2. [Label Powerset (LP)](https://www.researchgate.net/publication/263813673_A_Review_On_Multi-Label_Learning_Algorithms) - Problem transformation method : multi-class classification
 
-![lp](/assets/labelpowerset-model-schema.png)
 
 3. [Custom loss](https://link.springer.com/article/10.1007%2Fs11042-019-08260-2) - A pair of novel loss functions considering the label relationship between present and absent classes
 
-![cl](/assets/custom-loss-function.png)
 
 4. [Hierarchical training method](https://arxiv.org/abs/1911.06475) - Training procedure to exploit label dependencies
 
-![h](/assets/hierarchical-learning-schema.png)
 
 ## Dataset
 [CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/) is a large dataset of chest X-rays and competition contains 224,316 chest radiographs of 65,240 patients, containing both frontal and lateral views, labelled for 14 common CXR observations where each observation are either 0 (negative), 1 (positive), or u (uncertain), available for automated chest x-ray interpretation, featuring uncertainty labels and radiologist-labeled reference standard evaluation sets.
