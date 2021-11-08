@@ -16,7 +16,7 @@ Experiments of multi-label learning methods:
 
 ![dataset_ex](/assets/frontal_and_lateral_cxr.png)
 
-Note: You need to register to download the CheXpert dataset to receive a link to the download over email from https://stanfordmlgroup.github.io/competitions/chexpert/ or you can download the small version of dataset from http://download.cs.stanford.edu/deep/CheXpert-v1.0-small.zip
+**Note**: You need to register to download the CheXpert dataset to receive a link to the download over email from https://stanfordmlgroup.github.io/competitions/chexpert/ or you can download the small version of dataset from http://download.cs.stanford.edu/deep/CheXpert-v1.0-small.zip
 
 The experiments of methods are conducted on 102,942 chest radiograph images with frontal views from CheXpert focusing on 5 common pathologies, namely Cardiomegaly, Lung Opacity, Edema, Atelectasis, and Pleural Effusion, where samples with uncertainty labels are ignored.
 
