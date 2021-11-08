@@ -8,16 +8,11 @@ Experiments of multi-label learning methods:
 
 1. [Binary Relevance (BR)](https://arxiv.org/abs/1502.05988) - Benchmark 
 
-
-
 2. [Label Powerset (LP)](https://www.researchgate.net/publication/263813673_A_Review_On_Multi-Label_Learning_Algorithms) - Problem transformation method : multi-class classification
-
 
 3. [Custom loss](https://link.springer.com/article/10.1007%2Fs11042-019-08260-2) - A pair of novel loss functions considering the label relationship between present and absent classes
 
-
 4. [Hierarchical training method](https://arxiv.org/abs/1911.06475) - Training procedure to exploit label dependencies
-
 
 ## Dataset
 [CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/) is a large dataset of chest X-rays and competition contains 224,316 chest radiographs of 65,240 patients, containing both frontal and lateral views, labelled for 14 common CXR observations where each observation are either 0 (negative), 1 (positive), or u (uncertain), available for automated chest x-ray interpretation, featuring uncertainty labels and radiologist-labeled reference standard evaluation sets.
@@ -73,9 +68,14 @@ python main.py test --method=<method> --weights=<weights_filename>
 
 ## Results and Analysis
 
-
+| Metrics         | Baseline   | Labelpowerset   | Customloss   | Hierarchical   |
+| :---            |  :---:     |   :---:         |     :---:    |         ---:   |
+| 5-label AUC     | 0.8753     | 0.8909          |    0.8714    |       0.8738   |
+| 32-class AUC    | 0.9089     | 0.9354          |    0.9320    |       0.9074   |
+| Pair-wise AUC   | 0.5389     | 0.6248          |    0.5782    |       0.5367   |
+| Confusion       | 0.3381     | 0.2074          |    0.2491    |         0.3311 |
+| P(Act-A,Pred-A) | 0.5255     | 0.5896          |    0.5549    |       0.5240   |
 
 ## Conclusion
-
-## Citations
+Top two methods that can achieve significant overall performance improvements over Baseline method are Labelpowerset and Custom loss methods with 0.8909 and 0.8714 5-label AUC respectively on our test set.
 
