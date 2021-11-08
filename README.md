@@ -69,8 +69,8 @@ python main.py test --method=<method> --weights=<weights_filename>
 | :---            |  :---:     |   :---:         |     :---:    |         ---:   |
 | 5-label AUC     | 0.8753     | **0.8909**         |    0.8714    |       0.8738   |
 | 32-class AUC    | 0.9089     | **0.9354**         |    0.9320    |       0.9074   |
-| Pair-wise AUC   | 0.5389     | **0.6248**          |    0.5782    |       0.5367   |
-| Pair-wise Confusion       | 0.3381     | **0.2074**          |    0.2491    |         0.3311 |
+| Pairwise AUC   | 0.5389     | **0.6248**          |    0.5782    |       0.5367   |
+| Pairwise Confusion       | 0.3381     | **0.2074**          |    0.2491    |         0.3311 |
 | P(Act-A,Pred-A) | 0.5255     | **0.5896**         |    0.5549    |       0.5240   |
 
 ## Conclusion
