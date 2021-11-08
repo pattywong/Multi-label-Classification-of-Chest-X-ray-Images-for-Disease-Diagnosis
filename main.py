@@ -1,15 +1,26 @@
-
-# python main.py mode=<mode> method=<method> weights=<weights>
+''' 
+    Title: Multi-label learning algorithms for multi-label classification of chest X-ray images 
+    Author: Patsaya Wongchaisirikul (Patty)
+    Github: https://github.com/pattywong
+    Linkedin: https://www.linkedin.com/in/patsaya/
+    Commands
+        : python main.py --mode=train --method=baseline
+        : python main.py --mode=train --method=labelpowerset
+        : python main.py --mode=train --method=customloss
+        : python main.py --mode=test --method=baseline --weights=weights_file_name
+        : python main.py --mode=test --method=labelpowerset --weights=weights_file_name
+        : python main.py --mode=test --method=customloss --weights=weights_file_name
+'''
 
 import numpy as np
 import pandas as pd
 import os, sys, math, datetime
-from model.densenet import *
-from dataset.dataset import *
+from model.densenet121 import *
+from utils.dataset import *
 from utils.utils import *
 from utils.visualize import *
-from eval.eval import *
-from custom_loss.custom_loss1 import *
+from utils.eval import *
+from baseline.custom_loss1 import *
 
 import keras
 from keras import backend as K
@@ -34,21 +45,31 @@ if __name__ == "__main__":
                         required=True)
     parser.add_argument("--method",
                         metavar="<method>", 
-                        help="'baseline', 'labelpowerset', 'classifierchains' or 'customloss'", 
+                        help="'baseline', 'labelpowerset', or 'customloss'", 
                         required=True)
     parser.add_argument("--weights",
                         metavar="<weights>", 
-                        help="'latest', 'imagenet' or /path/to/weights", 
-                        required=True)
+                        help="None or /path/to/weights")
     args = parser.parse_args()
     
     # method
-    if args.method == 'baseline' or args.method == 'customloss':
+    if args.method == 'baseline':
         method = Baseline()
+        method.LOSS_FUNC = 'default'
+    
+    elif args.method == 'customloss':
+        method = Baseline()
+        method.LOSS_FUNC = 'customloss1'
+        
     elif args.method == 'labelpowerset':
         method = Labelpowerset()
-    elif args.method == 'classifierchains':
-        method = Classifierchains()
+        
+    # base weights / trained weights
+    if args.weights == None:
+        method.WEIGHTS_FILE = None
+    else:
+        method.WEIGHTS_FILE = args.weights
+
     # mode
     if args.mode == 'train':
         method.train()
