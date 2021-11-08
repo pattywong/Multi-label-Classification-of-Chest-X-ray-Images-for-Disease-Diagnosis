@@ -1,13 +1,6 @@
 # Multi-label Classification of Chest X-ray Images for Common Thoracic Diseases
 This is an experimental comparison of methods for multi-label classification of chest X-ray images. The experiments include problem transformation methods, hierarchical learning procedure method, and custom loss function, conducted to provide better insight into different approaches and their applications to multi-label classification. The model is based on Densely Connected Convolutional Networks, [DenseNet121](https://arxiv.org/abs/1608.06993), and built over a large dataset of chest X-rays for thoracic disease recognition, [CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/). In this study, the methods for multi-label learning are evaluated using example-based and label-based proposed metrics for a comprehensive overview of methods and revealing the best performing method for the classification task.
 
-The repository includes:
-- model script
-- preprocessing data script
-- Training and inference script
-- evaluating script
-- configuration file
-
 ## Introduction
 Diagnosis in chest radiography is considered to be a multi-label and fine-grained problem due to a single scan may be associated with multiple diseases simultaneously where diseases are visually similar and hard-to-distinguish. There are some natural correlations among the disease labels. However, the basic multi-label learning algorithm doesn't consider label dependencies and leads to label confusion. In this study, 4 different methods of multi-label learning are applied to see model performace improvement after exploiting disease and labels dependencies.
 
@@ -71,6 +64,8 @@ python main.py test --method=<method> --weights=<weights_filename>
 ```
 
 ## Results and Analysis
+
+
 
 ## Conclusion
 
