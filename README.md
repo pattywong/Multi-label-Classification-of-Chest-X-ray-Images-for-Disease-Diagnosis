@@ -13,9 +13,8 @@ Diagnosis in chest radiography is considered to be a multi-label and fine-graine
 
 Experiments of multi-label learning methods:
 
-0. [Binary Relevance (BR)](https://arxiv.org/abs/1502.05988) - Benchmark 
-1. [Label Powerset (LP)](https://www.researchgate.net/publication/263813673_A_Review_On_Multi-Label_Learning_Algorithms) - Problem transformation method : multi-class classification
-2. [Classifier Chains (CC)](https://www.researchgate.net/publication/263813673_A_Review_On_Multi-Label_Learning_Algorithms) - Problem transformation method that considers label correlations
+1. [Binary Relevance (BR)](https://arxiv.org/abs/1502.05988) - Benchmark 
+2. [Label Powerset (LP)](https://www.researchgate.net/publication/263813673_A_Review_On_Multi-Label_Learning_Algorithms) - Problem transformation method : multi-class classification
 3. [Custom loss](https://link.springer.com/article/10.1007%2Fs11042-019-08260-2) - A pair of novel loss functions considering the label relationship between present and absent classes
 4. [Hierarchical training method](https://arxiv.org/abs/1911.06475) - Training procedure to exploit label dependencies
 
@@ -24,7 +23,7 @@ Experiments of multi-label learning methods:
 
 ![dataset_ex](/assets/frontal_and_lateral_cxr.png)
 
-Please note that you need to subscribe to CheXpert website to download the dataset: https://stanfordmlgroup.github.io/competitions/chexpert/
+Note: You need to register to download the CheXpert dataset to receive a link to the download over email from https://stanfordmlgroup.github.io/competitions/chexpert/ or you can download the small version of dataset from http://download.cs.stanford.edu/deep/CheXpert-v1.0-small.zip
 
 The experiments of methods are conducted on 102,942 chest radiograph images with frontal views from CheXpert focusing on 5 common pathologies, namely Cardiomegaly, Lung Opacity, Edema, Atelectasis, and Pleural Effusion, where samples with uncertainty labels are ignored.
 
@@ -41,7 +40,7 @@ The experiments of methods are conducted on 102,942 chest radiograph images with
 
 ## Installation
 
-### Installing all packages using pip
+### Installing all packages using Pip
 
 Without using Anaconda, you will have to download and install respective versions of cudatoolkit and cudnn manually. Then, you have to set path variables for your systems.
 
@@ -49,7 +48,7 @@ Without using Anaconda, you will have to download and install respective version
 pip install -r requirements.txt
 ```
 
-### Installing TensorFlow using conda
+### Installing TensorFlow using Anaconda
 
 The advantage of using Anaconda to install is you can download tensorflow-gpu with respective versions of dependent packages all at once. You will not have to install cudatoolkit and cudnn manually from Nvidia because the packages are included in tensorflow-gpu, then install others packages using pip to complete.
 
@@ -58,7 +57,7 @@ conda install tensorflow-gpu
 ```
 
 ### Installing Microsoft Visual Studio
-Cuda libraries will be compiled using MSVS as a compiler. It is necessary to select the correct version of MSVS depending on the version of the Cuda toolkit you are selecting. You can download the Community Version of Microsoft Visual Studio [here](https://visualstudio.microsoft.com/downloads/).
+Cuda libraries will be compiled using MSVS as a compiler. It is necessary to select the correct version of MSVS depending on the version of the Cuda toolkit you are selecting. You can download the Community Version of Microsoft Visual Studio from https://visualstudio.microsoft.com/downloads/
 
 ## Training model
 
@@ -68,7 +67,7 @@ python main.py train --method=<method>
 
 ## Inference
 ```
-python main.py test --method=<method> --weights=</path/to/weights> 
+python main.py test --method=<method> --weights=<weights_filename> 
 ```
 
 ## Results and Analysis
